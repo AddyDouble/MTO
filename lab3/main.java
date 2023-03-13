@@ -20,12 +20,12 @@ class lab3 {
                 i++;
             }else if((format_string.charAt(i) == '#') && (format_string.charAt(i+1) == '.') && i + 3 < format_string.length()){
                 int result = trim(format_string.substring(i+2), param);
-                if(result != -1){
+                if(result != -1)
                     i += result + 2;
-                }
-                else{
+            
+                else
                     System.out.print(format_string.charAt(i));
-                }
+                
             }
             else if((format_string.charAt(i) == '#') && Character.isDigit(format_string.charAt(i+1)) && i + 2 < format_string.length()){
                 int result = padding(format_string.substring(i+1), param);
@@ -82,15 +82,15 @@ class lab3 {
     public static String trimArg(String text, String arg){
         int i = 0;
         for(; i < text.length(); i++){
-            if(Character.isDigit(text.charAt(i))){
+            if(Character.isDigit(text.charAt(i)))
                 continue;
-            }
-            else if(text.charAt(i) == 'k'){
+            
+            else if(text.charAt(i) == 'k')
                 break;
-            }
-            else{
+            
+            else
                 return null;
-            }
+            
         }
         try {
             int val = Integer.parseInt(text.substring(0, i));
