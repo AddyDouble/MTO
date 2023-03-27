@@ -13,6 +13,7 @@ class lab4 {
 
 	public static void my_printf(String format_string, String param) {
 		for (int i = 0; i < format_string.length(); i++) {
+		
 			if((format_string.charAt(i)) == '#' && (format_string.charAt(i+1) == 'g')){
 				int num;
 				try{
@@ -34,21 +35,7 @@ class lab4 {
 				System.out.print(val);
 				i++;
 			}
-			else if ((format_string.charAt(i) == '#') && (format_string.charAt(i + 1) == 'k')) {
-				String nParam = swapcase(param);
-				System.out.print(nParam);
-				i++;
-			} else if ((format_string.charAt(i) == '#') && (format_string.charAt(i + 1) == '.') && i + 3 < format_string.length()) {
-				int result = trim(format_string.substring(i + 2), param);
-				if (result != -1) i += result + 2;
-
-				else System.out.print(format_string.charAt(i));
-
-			} else if ((format_string.charAt(i) == '#') && Character.isDigit(format_string.charAt(i + 1)) && i + 2 < format_string.length()) {
-				int result = padding(format_string.substring(i + 1), param);
-				if (result != -1) i += result + 1;
-				else System.out.print(format_string.charAt(i));
-			} else {
+ else {
 				System.out.print(format_string.charAt(i));
 			}
 		}
