@@ -13,7 +13,28 @@ class lab4 {
 
 	public static void my_printf(String format_string, String param) {
 		for (int i = 0; i < format_string.length(); i++) {
-			if ((format_string.charAt(i) == '#') && (format_string.charAt(i + 1) == 'k')) {
+			if((format_string.charAt(i)) == '#' && (format_string.charAt(i+1) == 'g')){
+				int num;
+				try{
+					num = Integer.parseInt(param);
+				}catch (NumberFormatException e){
+					System.out.print(format_string.charAt(i));
+					continue;
+				}
+				boolean isNegative = num < 0;
+				if(isNegative){
+					System.out.print('-');
+					num *= -1;
+					param = param.substring(1);
+				}
+				StringBuilder stringBuilder = new StringBuilder();
+				stringBuilder.append(param);
+				stringBuilder.reverse();
+				int val = Integer.parseInt(stringBuilder.toString());
+				System.out.print(val);
+				i++;
+			}
+			else if ((format_string.charAt(i) == '#') && (format_string.charAt(i + 1) == 'k')) {
 				String nParam = swapcase(param);
 				System.out.print(nParam);
 				i++;
