@@ -1,20 +1,40 @@
 totafsdfsf #k fdsfsdf
 test
 totafsd#k fdsfsdf fdfjs
-test2
+tESt2
 jfldjfldk # wynik
 test3
 fjdfsfds # k alal
 test4
 djfjkldsjf #k jjjjjj fsfjdljfdlsj flj ldfj
-test5
-gjjkdsljflds #k jdlkfjdslf
+tesT5
+gjjkdsljflds #. jdlkfjdslf
 test6
 fjdslkfjdl #k tttttt
 test7
-fjdlsjfkl #k oooolll
+abc qwe
 test8
-rwrewrew #k fjdslkjfdl
+rwrewrew #.10k fjdslkjfdl
 test9
 fjdlskjfldjflj #k rewrewrew
 test10
+beest #2k ewa
+test11
+hello #2 k world
+test12
+'#7k'
+test13
+'#1k'
+test14
+hey #5.2k
+test15
+help #5. 2k
+test16
+#4.1k
+test17
+#ak 56
+test18
+#1.3k
+test19
+#0.0k
+test20

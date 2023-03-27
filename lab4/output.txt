@@ -1,10 +1,19 @@
-totafsdfsf test fdsfsdf
-totafsdtest2 fdsfsdf fdfjs
+abc TEST1 ala
+qwe TES pies
 jfldjfldk # wynik
 fjdfsfds # k alal
-djfjkldsjf test5 jjjjjj fsfjdljfdlsj flj ldfj
-gjjkdsljflds test6 jdlkfjdslf
-fjdslkfjdl test7 tttttt
-fjdlsjfkl test8 oooolll
-rwrewrew test9 fjdslkjfdl
-fjdlskjfldjflj test10 rewrewrew
+djfjkldsjf TE jjjjjj fsfjdljfdlsj flj ldfj
+gjjkdsljflds #. jdlkfjdslf
+fjdslkfjdl TEST7 tttttt
+abc qwe
+rwrewrew TEST9 fjdslkjfdl
+fjdlskjfldjflj TEST10 rewrewrew
+beest TEST11 ewa
+hello #2 k world
+' TEST13'
+'TEST14'
+hey    TE
+help #5. 2k
+   T
+#ak 56
+TES
