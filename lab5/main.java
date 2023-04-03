@@ -8,7 +8,7 @@ class lab5 {
 				System.out.print(param);
 				i++;
 			}else if((i + 2 < format_string.length() && format_string.charAt(i) == '#')){
-				int result = pad(format_string.substring(1), param);
+				int result = pad(format_string.substring(i+1), param);
 				if(result != -1){
 					i += result + 1;
 				}
