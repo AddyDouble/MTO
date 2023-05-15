@@ -48,7 +48,11 @@ class lab8 {
 			int val = Integer.parseInt(text.substring(0, i));
 			int num = Integer.parseInt(r);
 			String hex = Integer.toHexString(num);
-			hex = swap_chars(hex);
+			int toFill = val - hex.length();
+			String nVal = "";
+			for(int k = 0; k < toFill; k++)
+				nVal = nVal + "0";
+			hex = swap_chars(nVal);
 			System.out.print(hex);
 			return i;
 		}catch (Exception e){
