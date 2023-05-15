@@ -64,15 +64,15 @@ class lab8 {
 		StringBuilder nVal = new StringBuilder();
 		for (int i = 0; i < param.length(); i++) {
 			char c = param.charAt(i);
-			c = switch (c) {
-				case 'a','A' -> 'g';
-				case 'b','B' -> 'h';
-				case 'c','C' -> 'i';
-				case 'd','D' -> 'j';
-				case 'e','E' -> 'k';
-				case 'f','F' -> 'l';
-				case '0' -> 'o';
-				default -> param.charAt(i);
+			switch (c) {
+				case 'a': {c='g';break;}
+				case 'b': {c='h';break;}
+				case 'c': {c='i';break;}
+				case 'd': {c='j';break;}
+				case 'e': {c='k';break;}
+				case 'f': {c='l';break;}
+				case '0': {c='o';break;}
+				default: {c=param.charAt(i);break;}
 			};
 			nVal.append(c);
 		}
