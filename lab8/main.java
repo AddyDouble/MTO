@@ -19,15 +19,7 @@ class lab8 {
 		System.out.println("");
 	}
 	public static void main(String[] args) throws IOException {
-		//System.out.println("Hello, World!"); 
-		BufferedReader bufferReader=new BufferedReader(new InputStreamReader(System.in));
-		//Scanner sc=new Scanner(System.in);
-		String format_string, param;
-		while(bufferReader.ready()) {
-			format_string=bufferReader.readLine();
-			param=bufferReader.readLine();
-			my_printf(format_string,param);
-		}
+		my_printf("ab #.1j", "3");
 	}
 
 	public static int printHexa(String text, String r){
@@ -52,6 +44,7 @@ class lab8 {
 			String nVal = "";
 			for(int k = 0; k < toFill; k++)
 				nVal = nVal + "0";
+			nVal = nVal + hex;
 			hex = swap_chars(nVal);
 			System.out.print(hex);
 			return i;
