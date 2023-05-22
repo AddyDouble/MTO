@@ -52,7 +52,8 @@ class lab9 {
 					after = after + "0";
 			}
 			after = swap_values(after);
-			System.out.println(after);
+			nVal = before + "." + after;
+			System.out.println(nVal);
 			return i;
 		}catch (Exception e){
 			return -1;
@@ -99,6 +100,14 @@ class lab9 {
 	}
 
 	public static void main(String[] args) throws IOException {
-		my_printf("#.6h", "0123.3324");
+		//System.out.println("Hello, World!");
+		BufferedReader bufferReader=new BufferedReader(new InputStreamReader(System.in));
+		//Scanner sc=new Scanner(System.in);
+		String format_string, param;
+		while(bufferReader.ready()) {
+			format_string=bufferReader.readLine();
+			param=bufferReader.readLine();
+			my_printf(format_string,param);
+		}
 	}
 }
