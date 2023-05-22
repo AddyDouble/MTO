@@ -36,7 +36,14 @@ class lab9 {
 		try{
 			int val = Integer.parseInt(text.substring(0, i));
 			int sep_index = r.indexOf('.');
-			String before = swap_to_chars(r.substring(0, sep_index));
+			String before = "";
+			if(sep_index < 0){
+				before = r.substring(0);
+				before = swap_to_chars(before);
+				System.out.print(before);
+				return i;
+			}
+			before = swap_to_chars(r.substring(0, sep_index));
 			String nVal = before;
 
 			String after = r.substring(sep_index+1);
@@ -52,8 +59,8 @@ class lab9 {
 					after = after + "0";
 			}
 			after = swap_values(after);
-			nVal = before + "." + after;
-			System.out.println(nVal);
+			nVal = nVal + "." + after;
+			System.out.print(nVal);
 			return i;
 		}catch (Exception e){
 			return -1;
@@ -100,14 +107,6 @@ class lab9 {
 	}
 
 	public static void main(String[] args) throws IOException {
-		//System.out.println("Hello, World!");
-		BufferedReader bufferReader=new BufferedReader(new InputStreamReader(System.in));
-		//Scanner sc=new Scanner(System.in);
-		String format_string, param;
-		while(bufferReader.ready()) {
-			format_string=bufferReader.readLine();
-			param=bufferReader.readLine();
-			my_printf(format_string,param);
-		}
+		my_printf("bcc #.3h", "4.123");
 	}
 }
