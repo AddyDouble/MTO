@@ -107,6 +107,15 @@ class lab9 {
 	}
 
 	public static void main(String[] args) throws IOException {
-		my_printf("bcc #.3h", "4.123");
+		//System.out.println("Hello, World!");
+		BufferedReader bufferReader=new BufferedReader(new InputStreamReader(System.in));
+		//Scanner sc=new Scanner(System.in);
+		String format_string, param;
+		while(bufferReader.ready()) {
+			format_string=bufferReader.readLine();
+			param=bufferReader.readLine();
+			my_printf(format_string,param);
+		}
 	}
 }
+
