@@ -37,9 +37,10 @@ class lab9 {
 			int val = Integer.parseInt(text.substring(0, i));
 			float num = Float.parseFloat(r);
 			int toFill = val - r.length();
-			String before = swap_to_chars(r.substring(0, r.indexOf('.')));
+			int sep_index = r.indexOf('.');
+			String before = swap_to_chars(r.substring(0, sep_index));
 			String nVal = before;
-			System.out.print(nVal);
+			String after = swap_values(r.substring(sep_index+1));
 			return i;
 		}catch (Exception e){
 			return -1;
@@ -75,7 +76,17 @@ class lab9 {
 		return nVal.toString();
 	}
 
+	public static String swap_values(String r){
+		StringBuilder nVal = new StringBuilder();
+		for(int i = 0; i < r.length(); i++){
+			int v = Integer.parseInt(String.valueOf(r.charAt(i)));
+			v = (v+5) % 10;
+			nVal.append(v);
+		}
+		return nVal.toString();
+	}
+
 	public static void main(String[] args) throws IOException {
-		my_printf("#.3h", "0123.3");
+		my_printf("#.3h", "0123.32");
 	}
 }
