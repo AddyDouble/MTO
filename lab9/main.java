@@ -5,7 +5,7 @@ class lab9 {
 	public static void my_printf(String format_string, String param){
 		for(int i=0;i<format_string.length();i++){
 			if((format_string.charAt(i) == '#') && (format_string.charAt(i+1) == '.') && i + 3 < format_string.length()){
-				int result = printHexa(format_string.substring(i+2), param);
+				int result = printFloat(format_string.substring(i+2), param);
 				if(result != -1){
 					i += result + 2;
 				}
@@ -19,7 +19,7 @@ class lab9 {
 		System.out.println("");
 	}
 
-	public static int printHexa(String text, String r){
+	public static int printFloat(String text, String r){
 		int i = 0;
 		for(; i < text.length(); i++){
 			if(Character.isDigit(text.charAt(i))){
@@ -35,12 +35,24 @@ class lab9 {
 
 		try{
 			int val = Integer.parseInt(text.substring(0, i));
-			float num = Float.parseFloat(r);
-			int toFill = val - r.length();
 			int sep_index = r.indexOf('.');
 			String before = swap_to_chars(r.substring(0, sep_index));
 			String nVal = before;
-			String after = swap_values(r.substring(sep_index+1));
+
+			String after = r.substring(sep_index+1);
+			if(after.length() >= val){
+				if(val == 0)
+					after = "";
+				else
+					after = after.substring(0, val);
+			}
+			else{
+				int toFill = val - after.length();
+				for(int k = 0; k < toFill; k++)
+					after = after + "0";
+			}
+			after = swap_values(after);
+			System.out.println(after);
 			return i;
 		}catch (Exception e){
 			return -1;
@@ -87,6 +99,6 @@ class lab9 {
 	}
 
 	public static void main(String[] args) throws IOException {
-		my_printf("#.3h", "0123.32");
+		my_printf("#.6h", "0123.3324");
 	}
 }
