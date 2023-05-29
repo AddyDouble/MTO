@@ -1,4 +1,3 @@
-ytrewq 10
 ytrewq b
 ytrewq 12
 ytrewq d
