@@ -1,4 +1,3 @@
-qwerty 0
 qwerty 2
 qwerty 4
 qwerty 6
