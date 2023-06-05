@@ -14,12 +14,14 @@ class lab11 {
 		System.out.println("");
 	}
 	public static void main(String[] args) throws IOException{
-		my_printf("A #b", "123");
+		my_printf("A #b", "2");
 	}
 
 	public static void convertToBin(String param){
 		int num = Integer.parseInt(param);
 		String bin = Integer.toBinaryString(num);
+		StringBuilder builder = new StringBuilder(bin);
+		bin = builder.reverse().toString();
 		System.out.print(bin);
 	}
 
