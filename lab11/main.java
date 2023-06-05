@@ -13,11 +13,7 @@ class lab11 {
 		}
 		System.out.println("");
 	}
-	/*
-	public static void main(String[] args) throws IOException{
-		my_printf("A #b", "2");
-	}
-	 */
+	
 	public static void convertToBin(String param){
 		char[] letters = new char[]{'a','b','c','d','e','f','g','h','i','j'};
 		int num = Integer.parseInt(param);
