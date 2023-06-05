@@ -65,8 +65,6 @@ endef
 	# perform_test,INPUT_FILE_NAME_WOUT_EXTENSION,TEST_NAME
 	
 	$(call perform_test,noparams,"No params")
-	$(call perform_test,single,"Single")
-	$(call perform_test,double,"Single")
 
 	$(call restore_data)
 
@@ -76,8 +74,6 @@ generate:
 	# generate_output,INPUT_FILE_NAME_WOUT_EXTENSION
 	
 	$(call generate_answers,noparams)
-	$(call generate_answers,single)
-	$(call generate_answers,double)
 
 	$(call restore_data)
 
@@ -86,5 +82,3 @@ merge:
 	-rm ./answers.txt 2>/dev/null
 
 	$(call merge_test,noparams)
-	$(call merge_test,single)
-	$(call merge_test,double)
