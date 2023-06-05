@@ -1,0 +1,10 @@
+abcde 0
+abcde a
+abcde 0a
+abcde ba
+abcde 00a
+abcde c0a
+abcde 0ba
+abcde cba
+abcde 000a
+abcde d00a
