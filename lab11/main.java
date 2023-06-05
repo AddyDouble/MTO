@@ -13,19 +13,28 @@ class lab11 {
 		}
 		System.out.println("");
 	}
+	/*
 	public static void main(String[] args) throws IOException{
 		my_printf("A #b", "2");
 	}
-
+	 */
 	public static void convertToBin(String param){
+		char[] letters = new char[]{'a','b','c','d','e','f','g','h','i','j'};
 		int num = Integer.parseInt(param);
 		String bin = Integer.toBinaryString(num);
-		StringBuilder builder = new StringBuilder(bin);
-		bin = builder.reverse().toString();
+		StringBuilder nBin = new StringBuilder();
+		for(int i = 0; i < bin.length(); i++){
+			char c = bin.charAt(i);
+			if(c == '0')
+				nBin.append('0');
+			else{
+				nBin.append(letters[i % 10]);
+			}
+		}
+		bin = nBin.reverse().toString();
 		System.out.print(bin);
 	}
 
-	/*
 	public static void main(String[] args) throws IOException {
 		//System.out.println("Hello, World!"); 
 		BufferedReader bufferReader=new BufferedReader(new InputStreamReader(System.in));
@@ -37,5 +46,4 @@ class lab11 {
 			my_printf(format_string,param);
 		}
 	}
-	 */
 }
